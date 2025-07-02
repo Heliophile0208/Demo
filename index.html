@@ -1,64 +1,168 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Demo Sản phẩm</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f4f4f4;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 {
-      margin-bottom: 20px;
-    }
-    .group {
-      margin-bottom: 30px;
-    }
-    .group h2 {
-      margin-bottom: 10px;
-      color: #444;
-    }
-    a {
-      display: inline-block;
-      margin: 6px 10px;
-      padding: 10px 18px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      text-decoration: none;
-      color: #007acc;
-      transition: 0.2s;
-    }
-    a:hover {
-      background: #007acc;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Sản phẩm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+   body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #000000;
+    background-image: url('https://www.transparenttextures.com/patterns/brick-wall.png');
+    background-repeat: repeat;
+    color: #111;
+    padding: 30px 20px;
+}
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: white;
+            border-left: 4px solid #3b82f6;
+            padding-left: 10px;
+        }
+
+        .card-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+           background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(2px);
+            padding: 14px 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: 0.25s;
+            text-decoration: none;
+            color: inherit;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .card-icon {
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .card-group {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card-group {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1>🌐 Danh sách Demo Sản phẩm</h1>
+    <div class="container">
+        <h1>🌐 Demo Sản phẩm</h1>
 
-  <div class="group">
-    <h2>✈️ Landing Page</h2>
-    <a href="https://heliophile0208.github.io/LandingPage_Travel/" target="_blank">Travel</a>
-    <a href="https://heliophile0208.github.io/LandingPage_LyHon/" target="_blank">Divorce</a>
-  </div>
+        <div class="section">
+            <h2>✈️ Landing Page</h2>
+            <div class="card-group">
+                <a href="https://heliophile0208.github.io/LandingPage_Travel/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">🏝️</span>
+                        <span class="card-title">Travel Landing</span>
+                    </div>
+                </a>
+                <a href="https://heliophile0208.github.io/LandingPage_LyHon/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">💔</span>
+                        <span class="card-title">Divorce Landing</span>
+                    </div>
+                </a>
+                <a href="https://demo.nidtech.vn/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">📇</span>
+                        <span class="card-title">NFC Card Demo</span>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-  <div class="group">
-    <h2>💳 NFC Card</h2>
-    <a href="https://demo.nidtech.vn/" target="_blank">Demo NFC</a>
-  </div>
 
-  <div class="group">
-    <h2>🛠 Website Admin</h2>
-    <a href="https://nidtech.vn/" target="_blank">Nidtech - Public</a>
-    <a href="https://website.nidtech.vn/" target="_blank">Nidtech - Admin</a>
-    <a href="https://yvnlaw.com/" target="_blank">YVnLaw</a>
-    <a href="https://dichvuluatsubinhduong.vn/" target="_blank">Luật Số 1 (1)</a>
-    <a href="https://congtyluatso1.com/" target="_blank">Luật Số 1 (2)</a>
-  </div>
+
+        <div class="section">
+            <h2>🛠 Website Admin</h2>
+            <div class="card-group">
+                <a href="https://nidtech.vn/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">🌐</span>
+                        <span class="card-title">Nidtech</span>
+                    </div>
+                </a>
+                <a href="https://website.nidtech.vn/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">🔧</span>
+                        <span class="card-title">Sub Nidtech</span>
+                    </div>
+                </a>
+                <a href="https://yvnlaw.com/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">⚖️</span>
+                        <span class="card-title">YVnLaw</span>
+                    </div>
+                </a>
+                <a href="https://dichvuluatsubinhduong.vn/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">📄</span>
+                        <span class="card-title">Luật Số 1 (1)</span>
+                    </div>
+                </a>
+                <a href="https://congtyluatso1.com/" class="card" target="_blank">
+                    <div class="card-content">
+                        <span class="card-icon">📄</span>
+                        <span class="card-title">Luật Số 1 (2)</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
